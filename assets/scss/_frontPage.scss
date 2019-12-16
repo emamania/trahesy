@@ -1,0 +1,73 @@
+.main {
+    .wel {
+        h1 {
+            color: var(--texto);
+        }
+    }
+    .whois {
+        background: var(--fondo);
+        padding: 20px 15px;
+        h6 {
+            text-align: center;
+            padding-bottom: 1rem;
+            font-weight: 600;
+            font-size: 17px;
+            border-bottom: 1px solid var(--sucess);
+            width: 70%;
+            margin: 0 auto;
+            color: var(--texto);
+        }
+        div {
+            padding-top: 1rem;
+            font-size: 18px;
+            div {
+                display: flex;
+                i::before {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+.heading {
+    h5, h2, p {
+        text-align: center;
+    }
+    h5, h2 {
+        color: var(--primary);
+    }
+    h2 {font-size: 28px;font-weight: 600;}
+    h5 {font-size: 20px;}
+    p {width: 80%;margin: .5rem auto 2rem;}
+}
+.service, .blog {
+}
+.service {
+    .catimg {
+        position: relative;
+        img {
+        }
+        p {
+            text-align: center;
+            position: absolute;
+            bottom: 2em;
+            left: 0;
+            right: 0;
+            a {
+                color: #fff;
+                font-size: 18px;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+.trains {
+    .train {
+        border: 7px solid var(--sucess);
+        h3,h5,i {
+            text-align: center;
+        }
+    }
+}
