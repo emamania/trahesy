@@ -1,9 +1,7 @@
 :root {
     --gap          : 1rem;
-    @include fromin(lg) {
-        :root {
-            --gap       : 2rem;
-        }
+    @include fromin(md) {
+        --gap       : 2rem;        
     }
 }
 *, *::before, *::after {
@@ -14,10 +12,7 @@
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    @include fromin(sm){
-        //background: var(--third-color);
-    }
+    font-size: 14px;    
 }
 img {
     max-width: 100%;
@@ -82,7 +77,8 @@ hr {
 .emagrid {
     display: grid;
     grid-template-columns: 100%;
-    grid-column-gap: var(--gap);
+    /* grid-column-gap: var(--gap); */
+    grid-gap: var(--gap);
     width: calc(100% - 2rem);
     margin-left: 1rem;
     margin-right: 1rem;

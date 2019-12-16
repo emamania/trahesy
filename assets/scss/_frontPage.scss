@@ -1,9 +1,4 @@
 .main {
-    .wel {
-        h1 {
-            color: var(--texto);
-        }
-    }
     .whois {
         background: var(--fondo);
         padding: 20px 15px;
@@ -30,18 +25,30 @@
     }
 }
 .heading {
-    h5, h2, p {
+    h5, h2, h1, p {
         text-align: center;
     }
-    h5, h2 {
+    h5, h2, h1 {
         color: var(--primary);
     }
+    h1 {font-size: 32px;font-weight: 600;}
     h2 {font-size: 28px;font-weight: 600;}
     h5 {font-size: 20px;}
     p {width: 80%;margin: .5rem auto 2rem;}
 }
 .service, .blog {
 }
+
+.paralax {
+    
+    a.courc {
+        display: block;
+        padding: 18px 25px;
+        border: 2px solid #fff;
+    }
+
+}
+
 .service {
     .catimg {
         position: relative;
