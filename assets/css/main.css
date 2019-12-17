@@ -49,8 +49,8 @@ body {
 
 :root {
   --gap: 1rem; }
-  @media screen and (min-width: 1024px) {
-    :root :root {
+  @media screen and (min-width: 768px) {
+    :root {
       --gap: 2rem; } }
 
 *, *::before, *::after {
@@ -121,7 +121,8 @@ hr {
   display: grid;
   -ms-grid-columns: 100%;
   grid-template-columns: 100%;
-  grid-column-gap: var(--gap);
+  /* grid-column-gap: var(--gap); */
+  grid-gap: var(--gap);
   width: calc(100% - 2rem);
   margin-left: 1rem;
   margin-right: 1rem;
@@ -419,9 +420,6 @@ hr {
           #header #nav .menu ul li a {
             color: #fff; }
 
-.main .wel h1 {
-  color: var(--texto); }
-
 .main .whois {
   background: var(--fondo);
   padding: 20px 15px; }
@@ -444,11 +442,15 @@ hr {
       .main .whois div div i::before {
         font-size: 14px; }
 
-.heading h5, .heading h2, .heading p {
+.heading h5, .heading h2, .heading h1, .heading p {
   text-align: center; }
 
-.heading h5, .heading h2 {
+.heading h5, .heading h2, .heading h1 {
   color: var(--primary); }
+
+.heading h1 {
+  font-size: 32px;
+  font-weight: 600; }
 
 .heading h2 {
   font-size: 28px;
@@ -460,6 +462,11 @@ hr {
 .heading p {
   width: 80%;
   margin: .5rem auto 2rem; }
+
+.paralax a.courc {
+  display: block;
+  padding: 18px 25px;
+  border: 2px solid #fff; }
 
 .service .catimg {
   position: relative; }
