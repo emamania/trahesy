@@ -93,13 +93,14 @@
 			height: 60px;
 		}
 		&-img:nth-child(2){
-			grid-column: 2 / 3;
-			grid-row: 1 / span 2;
 			background:antiquewhite;
+			grid-row: 1;
+			grid-row-end: 2;
+			grid-column: 2;
 		}
 		&-img:nth-child(6){
-			grid-column-start: 3;
-			grid-column-end: span 4;
+			background:antiquewhite;
+			grid-column: 3/5;
 		}
 	}
 }
