@@ -1,8 +1,21 @@
-@charset "UTF-8";
 @import "variables";
+
 @import "global";
+
+@import "grid";
+
 @import "header";
-@import "footer";
+
 @import "frontPage";
-@import "shopping";
-@import "singleTour";
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: normal 900 1rem var(--font-Rale);
+    background: var(--dark);
+}

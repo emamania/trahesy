@@ -11,8 +11,9 @@
     machu picchu">
     <meta name="description" content="CuscoPeru.com ofrece Tours a Machu Picchu, Huayna Picchu. 
     Encuentre Aquí las mejores Vacaciones Peru y viaje a Cusco, Arequipa, Puno, Valle Sagrado y Camino Inca">
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/vendor/css/all.min.css">
     <link rel="stylesheet" href="/assets/ico.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
     <title>Volunteering in Machu Picchu</title>
     <!-- Card twitter -->
     <meta name="twitter:card" content="summary">
@@ -28,7 +29,60 @@
     
 </head>
 <body>
-    <header id="header">
+    <!-- HEADER AREA -->
+    <header class="header-area">
+        <div class="emagrid">
+            <nav class="nav">
+                <a href="#" class="link nav-brand text-light">
+                    <img src="./assets/images/logo.png" alt="logo peru travel">
+                </a>
+                <!-- toggle menu -->
+                <button class="toggle-button">
+                    <span class="fas fa-hamburger"></span>
+                </button>
+
+                <!-- navigation items -->
+                <div class="collapse" id="toggle-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-link">
+                            <a href="#" class="link text-light">Home</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" class="link text-light">people</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" class="link text-light">Design</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" class="link text-light">Travel</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" class="link text-light">About us</a>
+                        </li>
+                    </ul>
+                    <div class="search">
+                        <form class="form-group">
+                            <input type="search" class="input-control mr-sm-2">
+                            <button class="btn btn-submit" type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- MAIN SITE AREA -->    
+    <section class="banner-area">
+        <div class="container-fluid">
+            <div class="banner">
+                <img src="./assets/images/header-mapi.jpg" alt="Entrada a Machupicchu" class="fluid">
+            </div>
+            <div class="banner-title text-center">
+                <h1 class="text-lg text-light" >Aprende Español</h1>
+                <span class="description text-sm text-light">en el corazon del Perú https://www.youtube.com/watch?v=hjknCBKmdGk</span>
+            </div>
+        </div>
+    </section>
+    <!-- <header id="header">
         <nav class="emagrid" id="nav">            
             <div class="menu">
                 <ul>
@@ -36,10 +90,11 @@
                     <li><a href="#">Volunteering</a></li>
                     <li><a href="#">Cursos</a></li>
                     <li><a href="#">
-                        <div class="logo">
-                            <img src="/assets/images/logo.png" alt="Logo de volunteering Machu Picchu">
-                        </div>
-                    </a></li>
+                            <div class="logo">
+                                <img src="/assets/images/logo.png" alt="Logo de volunteering Machu Picchu">
+                            </div>
+                        </a>
+                    </li>
                     <li><a href="#">Vida del Volunteering</a></li>
                     <li><a href="#">Precio</a></li>
                     <li><a href="/icon.html">Inscripción</a></li>
@@ -49,7 +104,7 @@
         <div id="banner">
             <img src="/assets/images/header-mapi.jpg" alt="Volunteer Machu Picchu">
         </div>
-    </header>
+    </header> -->
     <section class="main">
         <div class="emagrid md-grid-12 s-py-1 lg-py-2">
             <div class="md-cols-8">
@@ -231,7 +286,7 @@
         </div>
         <p>https://codepen.io/reflectdigital/pen/Mxpyvj?editors=1100</p>
     </div>
-    <main id="main">
+    <!-- <main id="main">
         
         
         <section class="service lg-py-1 lg-py-2">
@@ -424,6 +479,12 @@
             <div class="emagrid md-grid-9"></div>
         </footer>
         <script src="/assest/js/jquery.js"></script>
-    </main>    
+    </main> -->
+    <!-- FOOTER AREA -->
+    <footer>
+
+    </footer>
+    <script src="/vendor/js/jquery.min.js"></script>
+    <script src="/assets/js/main.js"></script>    
 </body>
 </html>

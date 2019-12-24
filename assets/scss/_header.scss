@@ -1,37 +1,85 @@
-#header {
-    background: var(--primary);
-    #nav {
-        max-height: 50px;
-        justify-content: center;
-        align-items: center;
-        .logo>a, .menu>ul {
-            height: 50px;
-            display: block;
+header.header-area {
+    width: 100%;
+    position: absolute;
+    z-index: var(--z-normal);
+    .nav {
+        display: flex;
+        flex-direction: row;
+        .toggle-button {
+            margin-left: auto;
+            display: none;
+            border: 1px solid var(--light);
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            padding: .1rem 1rem;
+            border-radius: 5px;
+            box-shadow: var(--box-shadow);
+            cursor: pointer;
+            &:hover {
+                color: var(--gray);
+            }
         }
-        .logo {            
-            a {
-                padding: 10px;
-                color: #fff;
-                font-size: 20px;
-                font-weight: bold;
-                .icon-logo:before {
-                    font-size: 30px;
+        .navbar-nav {
+            display: flex;
+            list-style-type: none;
+            flex-direction: row;
+            .nav-link {
+                padding: 0 1vw;
+                .link:hover {
+                    color: var(--primary-color);
                 }
             }
         }
-        .menu {
-            position: relative;
-            ul {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                li {
-                    list-style: none;
-                    a {
-                        color: #fff;
-                    }
-                }
+        .collapse {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+        .nav-brand {
+            font: normal 700 1.1rem var(--font-mont);
+            img {
+                height: 65px;
             }
         }        
     }
+}
+
+
+/* BREAKPOINTS
+    sm      : 576px,
+    md      : 768px,
+    lg      : 992px,
+    xl      : 1200px    
+*/
+/* Responsive toggle menu */
+@include from(lg){
+    header.header-area{
+        height: 95px;
+        //background: var(--dark);
+        transition: height .5s ease;
+        overflow-y: hidden;
+        .nav {
+            flex-wrap: wrap;
+            height: 70px;
+            .toggle-button {
+                display: block!important;
+            }
+            .collapse, .navbar-nav {
+                flex-direction: column;
+                margin: auto;
+                text-align: center;
+            }
+            .form-group {
+                display: inline-block;
+                margin: 2% 0;
+            }
+            .nav-link {
+                padding: 10px 0!important;
+            }
+
+        }
+    }
+}
+.nav-collapse {
+    height: 24rem!important;
 }
