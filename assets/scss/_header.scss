@@ -23,6 +23,8 @@ header.header-area {
             display: flex;
             list-style-type: none;
             flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
             .nav-link {
                 padding: 0 1vw;
                 .link:hover {
@@ -44,7 +46,16 @@ header.header-area {
     }
 }
 
-
+.mblogo {
+    @include fromin(lg) {
+        display: none;
+    }
+}
+.pclogo {
+    @include from(lg) {
+        display: none;
+    }
+}
 /* BREAKPOINTS
     sm      : 576px,
     md      : 768px,

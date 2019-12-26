@@ -78,6 +78,16 @@
 		grid-gap: 1rem;
 		&-mov{
 			grid-column: 1 / span 2;
+			img {
+				width: 100%;
+				display: block;
+			}
+		}
+		&-img {
+			img {
+				width: 100%;
+				display: block;
+			}
 		}
 	}
 	.our {
@@ -88,13 +98,13 @@
 		.mision {
 			text-align: center;
 			.circle {
-				width: 100px;
-				height: 100px;
+				width: 70px;
+				height: 70px;
 				background: var(--dark);
 				border-radius: 50%;
 				@include fromin(sm) {
-					width: 150px;
-					height: 150px;
+					width: 110px;
+					height: 110px;
 				}
 			}
 		}

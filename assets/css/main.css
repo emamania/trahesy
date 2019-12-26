@@ -506,7 +506,11 @@ header.header-area {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
       -ms-flex-direction: row;
-      flex-direction: row; }
+      flex-direction: row;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      width: 100%; }
       header.header-area .nav .navbar-nav .nav-link {
         padding: 0 1vw; }
         header.header-area .nav .navbar-nav .nav-link .link:hover {
@@ -524,6 +528,14 @@ header.header-area {
       font: normal 700 1.1rem var(--font-mont); }
       header.header-area .nav .nav-brand img {
         height: 65px; }
+
+@media screen and (min-width: 1124px) {
+  .mblogo {
+    display: none; } }
+
+@media screen and (max-width: 1124px) {
+  .pclogo {
+    display: none; } }
 
 /* BREAKPOINTS
     sm      : 576px,
@@ -638,6 +650,12 @@ header.header-area {
       -ms-grid-column: 1;
       -ms-grid-column-span: 2;
       grid-column: 1 / span 2; }
+      .who .grid-mov img {
+        width: 100%;
+        display: block; }
+    .who .grid-img img {
+      width: 100%;
+      display: block; }
   .who .our {
     margin-top: 3.5rem;
     display: -webkit-box;
@@ -651,14 +669,14 @@ header.header-area {
     .who .our .mision {
       text-align: center; }
       .who .our .mision .circle {
-        width: 100px;
-        height: 100px;
+        width: 70px;
+        height: 70px;
         background: var(--dark);
         border-radius: 50%; }
         @media screen and (min-width: 520px) {
           .who .our .mision .circle {
-            width: 150px;
-            height: 150px; } }
+            width: 110px;
+            height: 110px; } }
 
 .ofert {
   background: var(--light_alt); }
