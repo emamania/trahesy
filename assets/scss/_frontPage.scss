@@ -1,12 +1,14 @@
 /* BANNER AREA */
 .banner-area {
-	position: relative;
+	position: relative;	
 	.banner {
 		position: relative;
 		top: 0;
 		z-index: var(--z-back);
 		width: 100%;
 		height: 100%;
+		background: #000;
+    	opacity: .7;
 		img{
 			height: 250px;
 			display: block;
@@ -20,6 +22,7 @@
 		bottom: 2rem;
 		width: 100%;
 		font: normal 800 1.5rem/1rem var(--font-mont);
+		z-index: var(--z-tooltip);
 	}
 }
 
@@ -67,7 +70,16 @@
 }
 
 .who {
-	//background: var(--light);
+	background: var(--light);
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2,1fr);
+		grid-gap: 1rem;
+		&-mov{
+			grid-column: 1 / span 2;
+		}
+	}
 	.our {
 		margin-top: 3.5rem;
 		display: flex;
@@ -76,21 +88,53 @@
 		.mision {
 			text-align: center;
 			.circle {
-				width: 150px;
-				height: 150px;
+				width: 100px;
+				height: 100px;
 				background: var(--dark);
 				border-radius: 50%;
+				@include fromin(sm) {
+					width: 150px;
+					height: 150px;
+				}
 			}
 		}
 	}
 }
+.ofert {
+	background: var(--light_alt);
+}
+.teach {
+	background-image: url(../images/study-español.jpg);
+	.overlay {
+		background: rgba(0, 47, 67, 0.6) none repeat scroll 0 0;
+	}
+	//background: #efefee;
+	/* height: 100vh;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover; */
+	.courc {
+		border: 2px solid #fff;
+		display: block;
+		padding: 18px 25px;
+		color: #fff;
+		background: rgba($color: #000000, $alpha: .2);
+		transition: background .5s ease;
+		&:hover {
+			background: var(--primary-color);
+		}
+	}
+}
 .paralax {
+	background: var(--light);
 	.grid {
 		display: grid;
 		grid-template-columns: repeat(4,1fr);
 		grid-template-rows: 1fr 1fr;
+		grid-gap: 1rem;
 		&-img {
-			height: 60px;
+			height: 120px;
 		}
 		&-img:nth-child(2){
 			background:antiquewhite;

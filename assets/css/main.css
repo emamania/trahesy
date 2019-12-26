@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* SCSS VARIABLES */
 :root {
   --primary-color:        #47C9E5;
@@ -5,6 +6,7 @@
   --gray:                 #8D8D8D;
   --gray-dark:            #343a40;
   --light:                #f8f9fa;
+  --light_alt:            #efefef;
   --dark:                 #343a40;
   /* Font Family */
   --font-mont:            'Mont', cursive;
@@ -567,7 +569,9 @@ header.header-area {
     top: 0;
     z-index: var(--z-back);
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    background: #000;
+    opacity: .7; }
     .banner-area .banner img {
       height: 250px;
       display: block; }
@@ -578,7 +582,8 @@ header.header-area {
     position: absolute;
     bottom: 2rem;
     width: 100%;
-    font: normal 800 1.5rem/1rem var(--font-mont); }
+    font: normal 800 1.5rem/1rem var(--font-mont);
+    z-index: var(--z-tooltip); }
 
 /* MOVIE AREA */
 .movie {
@@ -619,46 +624,91 @@ header.header-area {
     text-transform: uppercase;
     margin: 0 0 1.5rem 0; }
 
-.who .our {
-  margin-top: 3.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-  .who .our .mision {
-    text-align: center; }
-    .who .our .mision .circle {
-      width: 150px;
-      height: 150px;
-      background: var(--dark);
-      border-radius: 50%; }
+.who {
+  background: var(--light); }
+  .who .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[2];
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1rem; }
+    .who .grid-mov {
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 2;
+      grid-column: 1 / span 2; }
+  .who .our {
+    margin-top: 3.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .who .our .mision {
+      text-align: center; }
+      .who .our .mision .circle {
+        width: 100px;
+        height: 100px;
+        background: var(--dark);
+        border-radius: 50%; }
+        @media screen and (min-width: 520px) {
+          .who .our .mision .circle {
+            width: 150px;
+            height: 150px; } }
 
-.paralax .grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[4];
-  grid-template-columns: repeat(4, 1fr);
-  -ms-grid-rows: 1fr 1fr;
-  grid-template-rows: 1fr 1fr; }
-  .paralax .grid-img {
-    height: 60px; }
-  .paralax .grid-img:nth-child(2) {
-    background: antiquewhite;
-    -ms-grid-row: 1;
-    grid-row: 1;
-    -ms-grid-row-span: 2;
-    grid-row-end: 2;
-    -ms-grid-column: 2;
-    grid-column: 2; }
-  .paralax .grid-img:nth-child(6) {
-    background: antiquewhite;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 2;
-    grid-column: 3/5; }
+.ofert {
+  background: var(--light_alt); }
+
+.teach {
+  background-image: url(../images/study-español.jpg);
+  /* height: 100vh;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover; */ }
+  .teach .overlay {
+    background: rgba(0, 47, 67, 0.6) none repeat scroll 0 0; }
+  .teach .courc {
+    border: 2px solid #fff;
+    display: block;
+    padding: 18px 25px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.2);
+    -webkit-transition: background .5s ease;
+    -o-transition: background .5s ease;
+    transition: background .5s ease; }
+    .teach .courc:hover {
+      background: var(--primary-color); }
+
+.paralax {
+  background: var(--light); }
+  .paralax .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1rem; }
+    .paralax .grid-img {
+      height: 120px; }
+    .paralax .grid-img:nth-child(2) {
+      background: antiquewhite;
+      -ms-grid-row: 1;
+      grid-row: 1;
+      -ms-grid-row-span: 2;
+      grid-row-end: 2;
+      -ms-grid-column: 2;
+      grid-column: 2; }
+    .paralax .grid-img:nth-child(6) {
+      background: antiquewhite;
+      -ms-grid-column: 3;
+      -ms-grid-column-span: 2;
+      grid-column: 3/5; }
 
 html, body {
   height: 100%;
